@@ -14,39 +14,8 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- CSS Personalizado -->
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
-      color: white;
-      padding: 100px 0;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-      transition: 0.3s;
-    }
-
-    footer {
-      background-color: #212529;
-      color: white;
-    }
-
-    /* Media Query */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/logica.js"></script>
 </head>
 
 <body>
@@ -54,7 +23,7 @@
 <!-- NAVBAR RESPONSIVE -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Mi Portafolio</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -76,64 +45,72 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-4 text-center">
-                <img src="./foto.png" class="img-fluid rounded-circle mb-5" alt="Foto personal">
+                <img src="./imagenes/foto.png" class="img-fluid rounded-circle mb-5 mx-auto d-block" alt="Foto personal">
             </div>
             <div class="container">
                 <h1>Hola, soy Francisco Porta</h1>
-                <p class="lead">Desarrollador Web | Tecnología | Aprendiz constante</p>
+                <p class="lead">Desarrollador Web | Programador | Adminstrador de Sistemas</p>
             </div>
         </div>
     </div>
 </header>
 
 
-<!-- EXPERIENCIA -->
+
+    <!-- EXPERIENCIA -->
 <section id="experiencia" class="bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Experiencia</h2>
-    <ul class="list-group">
-      <li class="list-group-item">💼 Soporte técnico – Empresa X</li>
-      <li class="list-group-item">💻 Desarrollo web – Proyecto personal</li>
-      <li class="list-group-item">📚 Formación autodidacta en programación</li>
-    </ul>
-  </div>
-</section>
 
-<!-- PROYECTOS -->
-<section id="proyectos">
-  <div class="container">
-    <h2 class="text-center mb-5">Proyectos</h2>
     <div class="row g-4">
 
+      <!-- PROGRAMACIÓN -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 1">
+        <div class="card experiencia-card h-100 text-center p-3">
           <div class="card-body">
-            <h5 class="card-title">Proyecto 1</h5>
-            <p class="card-text">Aplicación web responsive con Bootstrap.</p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <i class="bi bi-code-slash fs-1 text-primary"></i>
+            <h5 class="card-title mt-3">Programación</h5>
+            <p class="card-text">
+              Desarrollo de aplicaciones y páginas web utilizando distintos lenguajes.
+            </p>
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-success">JavaScript</span>
+            <span class="badge bg-dark">Java</span>
+            <span class="badge bg-warning text-dark">Python</span>
           </div>
         </div>
       </div>
 
+      <!-- BASES DE DATOS -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 2">
+        <div class="card experiencia-card h-100 text-center p-3">
           <div class="card-body">
-            <h5 class="card-title">Proyecto 2</h5>
-            <p class="card-text">Sitio web informativo adaptable.</p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <i class="bi bi-database fs-1 text-success"></i>
+            <h5 class="card-title mt-3">Bases de Datos</h5>
+            <p class="card-text">
+              Diseño, consulta y gestión de bases de datos relacionales.
+            </p>
+            <span class="badge bg-success">MySQL</span>
+            <span class="badge bg-info text-dark">SQL</span>
+            <span class="badge bg-warning text-dark">Diseño ER</span>
           </div>
         </div>
       </div>
 
+      <!-- SISTEMAS INFORMÁTICOS -->
       <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 3">
+        <div class="card experiencia-card h-100 text-center p-3">
           <div class="card-body">
-            <h5 class="card-title">Proyecto 3</h5>
-            <p class="card-text">Proyecto académico con HTML y CSS.</p>
-            <a href="#" class="btn btn-primary">Ver más</a>
+            <i class="bi bi-pc-display fs-1 text-dark"></i>
+            <h5 class="card-title mt-3">Sistemas Informáticos</h5>
+            <p class="card-text">
+              Instalación, configuración y mantenimiento de sistemas.
+            </p>
+            <span class="badge bg-dark">Linux</span>
+            <span class="badge bg-secondary">Windows</span>
+            <span class="badge bg-primary">Redes</span>
+            <span class="badge bg-success">Comandos</span>
           </div>
         </div>
       </div>
@@ -142,26 +119,193 @@
   </div>
 </section>
 
-<!-- ARTICULOS -->
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="container">
+    <h2 class="text-center mb-5">Mis Proyectos</h2>
+    <p class="text-center mb-5">Estos son mis proyectos más importantes a la fecha</p>
+
+    <div class="row g-4">
+
+      <!-- PROYECTO 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_1.png" class="card-img-top" alt="Proyecto 1" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Portafolio Web</h5>
+            <p class="card-text">Portafolio personal desarrollado con Bootstrap.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/Proyecto_Bootstrap_DIW_FJPorta" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_2.png" class="card-img-top" alt="Proyecto 2" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Landing Page</h5>
+            <p class="card-text">Página promocional totalmente responsive.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/refine" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_3.png" class="card-img-top" alt="Proyecto 3" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Aplicación CRUD</h5>
+            <p class="card-text">Gestión de datos con base de datos.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/Github-Store" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_4.png" class="card-img-top" alt="Proyecto 4" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Blog Personal</h5>
+            <p class="card-text">Blog estático con diseño adaptable.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/YetiForceCRM" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_5.png" class="card-img-top" alt="Proyecto 5" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Web Corporativa</h5>
+            <p class="card-text">Sitio web informativo para empresa.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/AudioMuse-AI" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card proyecto-card h-100">
+          <img src="./imagenes/pro_6.png" class="card-img-top" alt="Proyecto 6" height="200" width="100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Aplicación Web</h5>
+            <p class="card-text">Proyecto académico con HTML, CSS y JS.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/fporbor/react-chatbotify" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i> Ver online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ARTÍCULOS -->
 <section id="articulos" class="bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Artículos</h2>
-    <div id="carouselArticulos" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner text-center">
+    <h2 class="text-center mb-5">Artículos</h2>
 
-        <div class="carousel-item active">
-          <p class="fs-5">Introducción a Bootstrap</p>
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Desarrollo Web</h5>
+            <p class="card-text">
+              Artículos relacionados con diseño y desarrollo web.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web"
+                 target="_blank" rel="noopener noreferrer">
+                Introducción al desarrollo web
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                 target="_blank" rel="noopener noreferrer">
+                Guía oficial de Bootstrap
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <div class="carousel-item">
-          <p class="fs-5">Diseño web responsive</p>
-        </div>
-
-        <div class="carousel-item">
-          <p class="fs-5">Buenas prácticas en HTML semántico</p>
-        </div>
-
       </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Programación</h5>
+            <p class="card-text">
+              Recursos y artículos sobre lenguajes de programación.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://www.w3schools.com/js/"
+                 target="_blank" rel="noopener noreferrer">
+                JavaScript básico
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.oracle.com/java/technologies/javase-documentation.html"
+                 target="_blank" rel="noopener noreferrer">
+                Documentación de Java
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bases de Datos</h5>
+            <p class="card-text">
+              Artículos sobre bases de datos y modelado.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://www.mysql.com/"
+                 target="_blank" rel="noopener noreferrer">
+                Introducción a MySQL
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.sqltutorial.org/"
+                 target="_blank" rel="noopener noreferrer">
+                Tutorial de SQL
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -189,7 +333,7 @@
 
 <!-- FOOTER -->
 <footer class="text-center py-3">
-  <p>© 2026 - Portafolio Profesional</p>
+  <p>2026 - IES FRANCISCO ROMERO VARGAS</p>
 </footer>
 
 <!-- Bootstrap JS -->

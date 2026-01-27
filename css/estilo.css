@@ -1,0 +1,61 @@
+/* Fuente general */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  padding: 100px 0;
+}
+
+/* Secciones */
+section {
+  padding: 80px 0;
+}
+
+/* Tarjetas */
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header img {
+    width: 180px;
+  }
+/* Tarjetas de experiencia */
+.experiencia-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+/* Tarjetas de proyectos */
+.proyecto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+}
