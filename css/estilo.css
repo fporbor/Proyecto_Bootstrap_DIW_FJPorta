@@ -1,75 +1,139 @@
-/* Fuente general */
+/* ================================
+   Estilos generales
+   ================================ */
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Fuente principal del sitio */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina paddings por defecto */
 }
 
-/* Header */
+
+/* ================================
+   Header / Hero
+   ================================ */
+
 header {
-  background: linear-gradient(to bottom, #0A3D62, #3C6382);
-  color: white;
-  padding: 100px 0;
+  background: linear-gradient(to bottom, #0A3D62, #3C6382); /* Degradado vertical azul */
+  color: white; /* Texto blanco */
+  padding: 100px 0; /* Espaciado superior e inferior */
 }
 
-/* Secciones */
+
+/* ================================
+   Secciones generales
+   ================================ */
+
 section {
-  padding: 80px 0;
+  padding: 80px 0; /* Espaciado vertical para todas las secciones */
 }
 
-/* Tarjetas */
+
+/* ================================
+   Tarjetas generales (Bootstrap cards)
+   ================================ */
+
 .card {
-  transition: transform 0.3s;
-  border: 2px solid black;
+  transition: transform 0.3s ease; /* Animación suave al hacer hover */
+  box-shadow: 0 0 0 2px #000; /* Borde negro estable (no desaparece al escalar) */
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /* Aumenta ligeramente el tamaño */
 }
 
-/* Footer */
-footer {
-  background-color: #212529;
-  color: white;
-}
 
-/* Media Queries */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+/* ================================
+   Tarjetas de experiencia
+   ================================ */
 
-  header img {
-    width: 180px;
-  }
-/* Tarjetas de experiencia */
 .experiencia-card {
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none; /* Sin borde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
 
 .experiencia-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* Se eleva hacia arriba */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra al hacer hover */
 }
-/* Tarjetas de proyectos */
+
+
+/* ================================
+   Tarjetas de proyectos
+   ================================ */
+
 .proyecto-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
 
 .proyecto-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px); /* Se eleva ligeramente */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra */
 }
-/* Cards de testimonios */
+
+
+/* ================================
+   Tarjetas de testimonios
+   ================================ */
+
 .testimonial-card {
-  width: 100%;
-  max-width: 400px;
-  border: none;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 520px; /* Ancho máximo aumentado para evitar cortes */
+  margin: 20px auto; /* Centrada horizontalmente */
+  border: none; /* Sin borde clásico */
+  box-shadow: 0 0 0 2px #000; /* Borde negro estable (no se corta al escalar) */
+  transition: transform 0.3s ease; /* Animación de escala */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Se agranda al pasar el ratón */
 }
 
 .testimonial-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 100px; /* Tamaño fijo de la imagen */
+  height: 100px;
+  object-fit: cover; /* Mantiene proporción sin deformar */
 }
+
+
+/* ================================
+   Ajustes del carrusel de testimonios
+   ================================ */
+
+.carousel-item {
+  overflow: visible; /* Permite que la card se agrande sin cortarse */
+}
+
+#testimonios .carousel-inner {
+  padding: 30px 0; /* Espacio extra arriba y abajo para el hover */
+}
+
+
+/* ================================
+   Footer
+   ================================ */
+
+footer {
+  background-color: #212529; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+}
+
+
+/* ================================
+   Media queries (responsive)
+   ================================ */
+
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 2rem; /* Reduce el tamaño del título en móvil */
+  }
+
+  header img {
+    width: 180px; /* Reduce la imagen del header */
+  }
+
+  .testimonial-card {
+    max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+  }
 }
